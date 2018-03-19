@@ -19,11 +19,9 @@ A default `length` function is injected into the cache object by `request-etag`.
 More details on the cache configuration options can be found on the lru-cache [webpage](https://www.npmjs.com/package/lru-cache).
 
 	var ETagRequest = require('request-etag');
-	var eTagRequest = new ETagRequest(cacheConfig);
-
-The `ETagRequest` constructor takes a second optional argument which specifies the underlying HTTP request client to use. It defaults to [request](https://www.npmjs.com/package/request), so the above constructor call is equivalent to,
-
 	var eTagRequest = new ETagRequest(cacheConfig, require('request'));
+
+The `ETagRequest` constructor takes a second optional argument which specifies the underlying HTTP request client to use. ~~It defaults to [request](https://www.npmjs.com/package/request), so the above constructor call is equivalent to,~~
 
 **Note that the signature of the underlying HTTP request client function MUST be the same as that of [request](https://www.npmjs.com/package/request) (e.g. [requestretry](https://www.npmjs.com/package/requestretry)).**
 
